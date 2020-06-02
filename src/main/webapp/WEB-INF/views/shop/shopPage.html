@@ -2,9 +2,11 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Title</title>
+    <title>Shop</title>
 </head>
 <body>
-    <p th:text="'Active user with ID = ' + ${id}"/>
+    <th:block th:each="item:${items}">
+        <p th:utext="${item}"/>
+    </th:block>
 </body>
 </html>

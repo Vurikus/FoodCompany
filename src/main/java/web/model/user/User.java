@@ -1,10 +1,11 @@
-package web.user;
+package web.model.user;
 
 public class User {
     //Field
     private String name;
     private Long id;
     private Long idParentUser;
+    private Float balance = 0F;
 
     //Constructor
 
@@ -39,5 +40,13 @@ public class User {
 
     public void setIdParentUser(Long idParentUser) {
         this.idParentUser = idParentUser;
+    }
+
+    public Float getBalance() {
+        return balance;
+    }
+
+    public void changeBalance(Float f) {
+        balance = balance + f;
     }
 }
